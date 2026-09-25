@@ -1,0 +1,284 @@
+/* ===========================================================
+   Laiba Nasir | Personal Portfolio - shared stylesheet
+   Used by: home.html, hobbies.html, skills.html,
+            gallery.html, contact.html
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --lav: #EDE3F5;
+  --lav-deep: #DCC9EC;
+  --stripe: #C9AEDD;
+  --purple: #6B3FA0;
+  --plum: #4B2E7A;
+  --ink: #2B1745;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  color: var(--ink);
+  background-image: url('../images/bg-hearts.jpg');
+  background-size: 420px auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Generic clearfix - needed anywhere a parent only contains
+   floated children, otherwise the parent collapses to 0 height. */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header.top {
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(4px);
+  padding: 22px 6vw 18px;
+  border-bottom: 3px solid var(--stripe);
+}
+
+header.top .brand {
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--plum);
+  letter-spacing: 0.3px;
+}
+
+header.top .role {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--purple);
+  margin-top: 2px;
+}
+
+/* Horizontal nav built with float on the <li> elements, per lab
+   hint (previously flex on the <a> tags directly). nav ul is
+   cleared via .clearfix so it doesn't collapse around its
+   floated <li> children. */
+nav {
+  margin-top: 14px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--plum);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 18px;
+  border: 2px solid var(--stripe);
+  border-radius: 999px;
+  background: var(--white);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: var(--white);
+}
+
+main {
+  max-width: 860px;
+  margin: 40px auto 60px;
+  padding: 0 6vw;
+}
+
+.panel {
+  background: rgba(255,255,255,0.92);
+  border: 3px solid var(--stripe);
+  border-radius: 22px;
+  padding: 38px 40px;
+  margin-bottom: 28px;
+}
+
+.panel h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--plum);
+  margin: 0 0 6px;
+}
+
+.panel h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--purple);
+  margin: 0 0 16px;
+}
+
+.panel p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+.panel p:last-child { margin-bottom: 0; }
+
+.tagline {
+  font-size: 17px;
+  color: var(--purple);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+ul.plain {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.plain li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--lav-deep);
+  font-size: 16px;
+}
+
+ul.plain li:last-child { border-bottom: none; }
+
+ul.plain li strong {
+  color: var(--plum);
+  font-weight: 600;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.chip {
+  background: var(--lav);
+  border: 2px solid var(--stripe);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 620px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+a.text-link {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+/* ---------- Hobbies: photo floated beside a hobby entry ---------- */
+.hobby-media {
+  float: left;
+  width: 190px;
+  margin: 4px 20px 10px 0;
+  border: 3px solid var(--stripe);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.hobby-media img { width: 100%; display: block; }
+
+/* ---------- Gallery: float-based grid (previously CSS grid) ---------- */
+.gallery-grid figure {
+  float: left;
+  width: 47%;
+  margin: 0 3% 20px 0;
+  background: var(--white);
+  border: 3px solid var(--stripe);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery-grid figure:nth-child(2n) { margin-right: 0; }
+
+.gallery-grid img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-grid figcaption {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--plum);
+}
+
+@media (max-width: 620px) {
+  .gallery-grid figure { float: none; width: 100%; margin-right: 0; }
+}
+
+form.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 480px;
+}
+
+form.contact-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--plum);
+  margin-bottom: 4px;
+  display: block;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  padding: 10px 12px;
+  border: 2px solid var(--stripe);
+  border-radius: 10px;
+  background: var(--lav);
+  color: var(--ink);
+}
+
+form.contact-form button {
+  align-self: flex-start;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 11px 26px;
+  border: none;
+  border-radius: 999px;
+  background: var(--purple);
+  color: var(--white);
+  cursor: pointer;
+}
+
+form.contact-form button:hover { background: var(--plum); }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: var(--plum);
+}
