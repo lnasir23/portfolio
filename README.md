@@ -48,4 +48,4 @@ Laiba-portfolio/
 
 ## Live site
 - GitHub repository: https://github.com/lnasir23/portfolio
-- GitHub Pages: https://lnasir23.github.io/portfolio/ (Home) · https://lnasir23.github.io/portfolio/hobbies.html (Hobbies) · https://lnasir23.github.io/portfolio/skills.html (Skills) · https://lnasir23.github.io/portfolio/gallery.html (Gallery) · https://lnasir23.github.io/portfolio/contact.html (Contact)
+- GitHub Pages: https://lnasir23.github.io/portfolio/ (Index/Home) · 
