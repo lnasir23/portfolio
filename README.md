@@ -47,5 +47,5 @@ Laiba-portfolio/
   one reusable clearfix rule used everywhere floats need containing.
 
 ## Live site
-- GitHub repository: _add link after pushing_
-- GitHub Pages: _add link after enabling Pages_
+- GitHub repository: https://github.com/lnasir23/portfolio
+- GitHub Pages: https://lnasir23.github.io/portfolio/ (Home) · https://lnasir23.github.io/portfolio/hobbies.html (Hobbies) · https://lnasir23.github.io/portfolio/skills.html (Skills) · https://lnasir23.github.io/portfolio/gallery.html (Gallery) · https://lnasir23.github.io/portfolio/contact.html (Contact)
